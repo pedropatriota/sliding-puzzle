@@ -22,6 +22,7 @@
     "import/newline-after-import": "warn",
     "import/no-duplicates": "error",
     "import/no-named-as-default-member": "off",
+    "import/no-named-as-default": 0,
     "simple-import-sort/imports": "warn",
     "simple-import-sort/exports": "warn",
     "react/prop-types": "off",
