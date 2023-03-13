@@ -8,6 +8,7 @@ export type TBoardProps = {
   handleTileClick: (i: number) => void;
   emptyIndex: number;
   size: number;
+  imgUrl?: string;
 };
 
 export type TSwapProps = {
@@ -28,6 +29,10 @@ export type TTilesProps = {
   emptyIndex: number;
   handleTileClick: (i: number) => void;
   isEmptyIndex?: boolean;
+  imgUrl?: string;
+  size: number;
+  colPos?: number;
+  rowPos?: number;
 };
 
 export type TTitleProps = {
@@ -36,9 +41,10 @@ export type TTitleProps = {
 
 export type TInputProps = {
   label: string;
-  value: number;
+  value: number | string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
+  type?: "text" | "number";
 };
 
 export type TButtonProps = {

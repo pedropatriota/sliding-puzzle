@@ -13,6 +13,7 @@ describe("Tiles Component", () => {
         handleTileClick={mockHandleTileClick}
         index={1}
         tile={tileContent}
+        size={3}
       />
     );
 

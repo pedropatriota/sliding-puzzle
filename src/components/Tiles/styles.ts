@@ -10,4 +10,9 @@ export const Tiles = styled.div<Partial<TTilesProps>>`
   width: 100%;
   padding: 5px;
   cursor: pointer;
+  background-image: ${({ imgUrl }) => (imgUrl ? `url(${imgUrl})` : undefined)};
+  background-position: ${({ colPos, rowPos, imgUrl }) =>
+    imgUrl ? `${colPos}px ${rowPos}px` : undefined};
+  background-size: 600px;
+  background-repeat: no-repeat;
 `;

@@ -17,6 +17,7 @@ const useHelper = () => {
   const [tiles, setTiles] = React.useState<number[]>(createdTiles);
   const [emptyIndex, setEmptyIndex] = React.useState<number>(size * size - 1);
   const [gameStarted, setGameStarted] = React.useState<boolean>(false);
+  const [imgUrl, setImgUrl] = React.useState<string>("");
 
   const shuffle = () => {
     const shuffledTiles = shuffleTiles(tiles);
@@ -77,7 +78,8 @@ const useHelper = () => {
     setSize,
     swapTile,
     shuffle,
-
+    setImgUrl,
+    imgUrl,
     tiles,
     emptyIndex,
     gameStarted,

@@ -2,7 +2,13 @@ import { TBoardProps } from "../../contracts";
 import Tiles from "../Tiles";
 import * as Style from "./styles";
 
-const Board = ({ tiles, handleTileClick, emptyIndex, size }: TBoardProps) => {
+const Board = ({
+  tiles,
+  handleTileClick,
+  emptyIndex,
+  size,
+  imgUrl,
+}: TBoardProps) => {
   return (
     <Style.Board size={size} role="contentinfo">
       {tiles.map((tile, i) => (
@@ -12,6 +18,8 @@ const Board = ({ tiles, handleTileClick, emptyIndex, size }: TBoardProps) => {
           handleTileClick={handleTileClick}
           tile={tile}
           emptyIndex={emptyIndex}
+          imgUrl={imgUrl}
+          size={size}
         />
       ))}
     </Style.Board>
