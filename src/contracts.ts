@@ -38,4 +38,11 @@ export type TInputProps = {
   label: string;
   value: number;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  disabled?: boolean;
+};
+
+export type TButtonProps = {
+  content: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
 };

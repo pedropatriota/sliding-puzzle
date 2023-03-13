@@ -13,5 +13,12 @@ export const InputContainer = styled.div`
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 5px;
+    outline: none;
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #eee;
+      color: #ccc;
+    }
   }
 `;
