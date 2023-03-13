@@ -6,5 +6,5 @@ export const Board = styled.div`
   grid-template-rows: repeat(4, minmax(150px, 1fr));
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin: 100px 0 20px 0;
 `;

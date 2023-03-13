@@ -1,14 +1,12 @@
 import React from "react";
 
+import { TBoardProps } from "../../contract";
 import * as Style from "./styles";
 
-const Board: React.FC = () => {
-  const length = 16; // the amount of tiles on the Board
-  const createdTiles = Array.from({ length }, (_, i) => i + 1);
-
+const Board = ({ tiles }: TBoardProps) => {
   return (
     <Style.Board>
-      {createdTiles.map(key => (
+      {tiles.map(key => (
         <div
           key={key}
           style={{
