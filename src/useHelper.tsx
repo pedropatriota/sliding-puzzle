@@ -20,12 +20,11 @@ const useHelper = () => {
 
   const shuffle = () => {
     const shuffledTiles = shuffleTiles(tiles);
+    const findEmptyIndex = shuffledTiles.indexOf(size ** 2);
+    setTiles([...shuffledTiles]);
 
     if (isPuzzleSolvable(shuffledTiles)) {
-      const findEmptyIndex = shuffledTiles.indexOf(size ** 2);
       setEmptyIndex(findEmptyIndex);
-
-      setTiles([...shuffledTiles]);
       setGameStarted(true);
     } else {
       alert("This is not solvable, please click on the button again.");
