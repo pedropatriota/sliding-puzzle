@@ -27,6 +27,8 @@ const useHelper = () => {
 
       setTiles([...shuffledTiles]);
       setGameStarted(true);
+    } else {
+      alert("This is not solvable, please click on the button again.");
     }
   };
 
@@ -38,7 +40,13 @@ const useHelper = () => {
       tiles,
     });
 
-    if (params) {
+    if (!gameStarted) {
+      alert(
+        "First you need to click on 'start game' button to swap the tiles!"
+      );
+    }
+
+    if (params && gameStarted) {
       const { newBoard, newEmptyIndex } = params;
       setTiles(newBoard);
       setEmptyIndex(newEmptyIndex);
